@@ -1,0 +1,150 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: black;
+}
+
+body{
+	text-align: center;
+	background: rgb(19, 53, 78);
+}
+
+
+#container{
+	font-size: 2vh;
+	margin: 10vh;
+	height: 80vh;
+	background: white;
+	opacity: 1;
+	overflow-y: scroll;
+	text-align: justify;
+	padding: 3%;
+}
+
+#content{
+	padding: 50px;
+	opacity: 1;
+	width: 100%;
+}
+
+h1{
+	font-size: 50px;
+}
+
+a{
+	text-decoration: none;
+}
+
+a, input[type="submit"], select{
+	margin: 0 auto;
+	text-decoration: none;
+	font-size: 2vh;
+	border-style: none;
+	border-radius: 0%;
+	padding: 2px 20px;
+	margin-top: 2px;
+	height: 2.75vh;
+	max-width: 5000px;
+
+}
+
+a:hover, input[type="submit"]:hover{
+	color: white;
+	background: rgb(19, 53, 78);
+	transition: color 0.4s ease;
+}
+
+form p, form input{
+	font-size: 20px;
+	
+}
+
+table{
+	width: 95%;
+	margin: 0 auto;
+	padding: 10px 15px;
+	text-align: left;
+}
+
+th{
+	font-size: 20px;
+	color: rgb(19, 53, 78);
+	padding: 0.3% 0 0.3% 1.5%;
+	background: #a0bacc;
+}
+
+td{
+	border: 2px solid grey;
+	padding: 5px;
+}
+
+.homeBtn{
+	font-size: 5vh;
+	position: fixed;
+	margin-left: -45%;
+	background: none;
+}
+.homeBtn:hover{
+	background: none;
+	color: red;
+}
+
+#title {
+	margin-top: 1%;
+    text-align: center;
+}
+
+#title h1{
+    padding: 0.1%;
+    font-size: 3vh;
+}
+
+#personal .label{
+	font-size: 1.5vh;
+}
+
+.label{
+	display: inline-block;
+    background: rgb(230, 229, 229);
+    padding: 0.5vh 5vh;
+    text-align: left;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.res{
+	height: 4vh;
+    padding: 0.2vh 4vh;
+    border: 1px solid gray;
+    border-radius: 2px;
+    width: 13%; 
+}
+
+#personal{
+	display: grid;
+  	grid-column-gap: 500000px;
+
+}
+
+.mid, .right{
+	margin-left: 2.5vh;
+}
+
+.left{
+	width: 13%;
+}
+
+.mid{	
+	max-width: 13%;
+}
+
+.right{
+	margin-right: 0.2vh;
+}
+
+section{
+	margin-top: 5px;
+}
+

@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+body {
+    width: 100%;
+    background: rgb(19, 53, 78);
+    font-size: 1.5vh;
+}
+
+form {
+    background: rgb(255, 255, 255);
+    padding: 5%;
+    margin: 15vh 5% 5% 5%;
+    border-radius: 5px;
+}
+
+#header {
+    text-align: center;
+}
+
+#header p{
+    padding: 0.3%;
+}
+
+.title {
+    color: white;
+    background: rgb(7, 81, 124);
+    font-style: italic;
+    padding: 1vh 1%;
+    margin: 0.5vh 0 0 0 ;
+}
+
+section {
+    width: 100%;
+}
+
+label, #submit {
+    color: black;
+    display: inline-block;
+    background: rgb(229, 229, 230);
+    padding: 1vh 0 1vh 1em;
+    text-align: left;
+    border: 1px solid gray;
+    border-radius: 3px;
+    height: 3.8vh;
+}
+
+label.reg {
+    width: 21%;
+}
+
+label.grid2 {
+    width: 42%;
+}
+
+label.grid4 {
+    width: 84%;
+}
+
+label.names2, label.names21, label.names22, label.names, input.names {
+    width: 100%;
+}
+
+label.names2 {
+    height: 10vh;
+}
+
+label.names21 {
+    height: 11.44vh;
+}
+
+label.names22 {
+    height: 15.3vh;
+}
+
+label.names3 {
+    height: 6.2vh;
+}
+
+label.names4 {
+    height: 3vh;
+}
+
+#row3 {
+    height: 11.4vh;
+}
+
+input {
+    height: 3.8vh;
+    padding: 0 3%;
+    border: 1px solid gray;
+    border-radius: 2px;
+    font-size: 1.5vh;
+}
+
+input.reg {
+    width: 78%;
+}
+
+input.ext {
+    width: 57%;
+}
+
+input.ext2 {
+    width: 20.7%;
+}
+input.ext3 {
+    width: 35%;
+}
+
+input.ext4 {
+    width: 21.4%;
+}
+
+input.grid2 {
+    width: 57%;
+}
+
+input.radio {
+   width: 1em;
+   vertical-align: middle;
+   margin-left: 3%;
+}
+
+input.other {
+    width: 98.7%;
+}
+
+input.names {
+    height: 3.8vh;
+}
+
+select.names {
+    height: 4vh;
+    width: 200%;
+}
+
+div.grid2, .grid21, div.grid7 {
+    display: grid;
+}
+
+div.grid2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid21 {
+    grid-template-columns: 30% 70%;
+}
+
+div.grid7 {
+    grid-template-columns: 17% 25% 23% 8% 10% 8% 9%;
+}
+
+#submit {
+    display: block;
+    width: 15%;
+    text-align: center;
+    padding: 0;
+}
+
+#submit:hover {
+    animation: brightness 0.3s ease;
+    filter: brightness(80%);
+}
+
+@keyframes brightness {
+    0% {filter: brightness(100%);}
+    100% {filter: brightness(80%);}
+}
