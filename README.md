@@ -1,2 +1,2 @@
 # CMSC127_Lab
-Laboratory file in CMSC 127
+Laboratory files in CMSC 127
