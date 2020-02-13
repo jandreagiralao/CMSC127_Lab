@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id="nav">
-            <a href="./main.php">< HOME</a>
+            <a href="./main.php">HOME</a>
             <p>You are in the Application Page</p>
         </div>
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">

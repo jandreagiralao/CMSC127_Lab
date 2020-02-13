@@ -8,19 +8,19 @@
 
 body{
 	text-align: center;
-	background: rgb(19, 53, 78);
+	background: url(./images/back.jpeg);
 }
 
 
 #container{
 	font-size: 2vh;
-	margin: 10vh;
+	margin: 10vh 10%;
 	height: 80vh;
 	background: white;
-	opacity: 1;
+	opacity: 0.9;
 	overflow-y: scroll;
 	text-align: justify;
-	padding: 3%;
+	padding: 1%;
 }
 
 #content{

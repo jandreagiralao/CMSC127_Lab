@@ -24,12 +24,12 @@
 
 <body>
 	<div id="nav">
-		<a href="./main.php">< HOME</a>
+		<a href="./main.php">HOME</a>
 		<p>You are in the Applicant's Page</p>
 		<form action="./viewXdelete.php" method="post">
 			<input name ='username' type = 'hidden' value = "admin">
 			<input name ='password' type = 'hidden' value = "admin">
-			<input id='delete' type="submit" value="< Go back to the list of applicants.">
+			<input id='delete' type="submit" value="Go back to the list of applicants.">
 		</form>
 	</div>
 	<?php

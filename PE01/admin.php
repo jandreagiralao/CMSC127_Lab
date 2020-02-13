@@ -25,7 +25,7 @@
 
     <body>
         <div id="nav">
-            <a href="./main.php">< LOGOUT</a>
+            <a href="./main.php">LOGOUT</a>
             <p>Welcome to the Admin Page</p>
         </div>
 

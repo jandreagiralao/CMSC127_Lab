@@ -25,13 +25,13 @@ unset($_SESSION["password"]);
 
 <body>
 	<div id="nav">
-		<a href="./main.php">
-			< HOME</a> <p>You are in the Applicant's Page</p>
-				<form action="./admin.php" method="post">
-					<input name='username' type='hidden' value="admin">
-					<input name='password' type='hidden' value="admin">
-					<input id='delete' type="submit" value="< Go back.">
-				</form>
+		<a href="./main.php">HOME</a> 
+		<p>You are in the Applicants Page</p>
+		<form action="./admin.php" method="post">
+			<input name='username' type='hidden' value="admin">
+			<input name='password' type='hidden' value="admin">
+			<input id='delete' type="submit" value="Go Back to Admin Page.">
+		</form>
 	</div>
 	<section id="container">
 		<section id="content">
@@ -59,8 +59,8 @@ unset($_SESSION["password"]);
 
 				<tr>
 					<th colspan="3" scope="colgroup">Applicant's Name</th>
-					<th rowspan="2">View Applicant</th>
-					<th rowspan="2">Delete</th>
+					<th rowspan="2"></th>
+					<th rowspan="2"></th>
 				</tr>
 
 
