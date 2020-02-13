@@ -170,7 +170,7 @@
         </section>
         <section id="login">
             <h2>Account Login</h2><br><br>
-            <form action="./viewXdelete.php" method="post">
+            <form action="./admin.php" method="post">
                 <input type="text" name="username" value="" id="user" placeholder="Username" autocomplete="off" required><br>
                 <input type="password" name="password" value="" id="pass" placeholder="Password" autocomplete="off" required>
                 <br><br><br> <input type="submit" name="submit" value="Log in" id="submit">

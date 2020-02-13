@@ -30,7 +30,7 @@
         <div class="dropdown">
             <button>Manage</button>
             <div class="dropdown-list">
-                <form action="#" method="post">
+                <form action="./manage_educ.php" method="post">
                     <input name='username' type='hidden' value="admin">
                     <input name='password' type='hidden' value="admin">
                     <input id='' type="submit" value="Education">
