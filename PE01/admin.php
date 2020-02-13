@@ -18,34 +18,46 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="./admin.css">
+        <link rel="stylesheet" href="./nav.css">
     </head>
 
     <body>
-        <form action="./viewXdelete.php" method="post">
-            <input name='username' type='hidden' value="admin">
-            <input name='password' type='hidden' value="admin">
-            <input id='delete' type="submit" value="View applicant's page">
-        </form>
+        <div id="nav">
+            <a href="./main.php">< LOGOUT</a>
+            <p>Welcome to the Admin Page</p>
+        </div>
+        
+        <div class="grid_2">
+            <div class="view">
+                <form action="./viewXdelete.php" method="post">
+                    <input name='username' type='hidden' value="admin">
+                    <input name='password' type='hidden' value="admin">
+                    <input id='button' type="submit" value="VIEW APPLICANTS PAGE">
+                </form> 
+            </div>
+            
 
-        <div class="dropdown">
-            <button>Manage</button>
-            <div class="dropdown-list">
-                <form action="./manage_educ.php" method="post">
-                    <input name='username' type='hidden' value="admin">
-                    <input name='password' type='hidden' value="admin">
-                    <input id='' type="submit" value="Education">
-                </form>
-                <form action="#" method="post">
-                    <input name='username' type='hidden' value="admin">
-                    <input name='password' type='hidden' value="admin">
-                    <input id='' type="submit" value="Scholarship">
-                </form>
-                <form action="#" method="post">
-                    <input name='username' type='hidden' value="admin">
-                    <input name='password' type='hidden' value="admin">
-                    <input id='' type="submit" value="Major Field">
-                </form>
+            <div class="dropdown">
+                <button id="button">MANAGE</button>
+                <div class="dropdown-list">
+                    <form action="./manage_educ.php" method="post">
+                        <input name='username' type='hidden' value="admin">
+                        <input name='password' type='hidden' value="admin">
+                        <input id='option' type="submit" value="EDUCATION">
+                    </form>
+                    <form action="#" method="post">
+                        <input name='username' type='hidden' value="admin">
+                        <input name='password' type='hidden' value="admin">
+                        <input id='option' type="submit" value="SCHOLARSHIP">
+                    </form>
+                    <form action="#" method="post">
+                        <input name='username' type='hidden' value="admin">
+                        <input name='password' type='hidden' value="admin">
+                        <input id='option' type="submit" value="MAJOR FIELD">
+                    </form>
+                </div>
             </div>
         </div>
+        
     </body>
 </html>
