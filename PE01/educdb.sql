@@ -1,6 +1,6 @@
 CREATE TABLE education(
 	edID varchar(5),
-	lvl varchar(30),
+	lvl varchar(30)
 );
 
 CREATE TABLE scholarship(
