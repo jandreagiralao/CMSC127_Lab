@@ -1,18 +1,27 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
 .dropdown {
-            position: relative;
-            display: inline-block;
-        }
+    position: relative;
+    display: inline-block;
+}
 
-        .dropdown-list {
-            display: none;
-            position: absolute;
-        }
+.dropdown-list {
+    display: none;
+    position: absolute;
+}
 
-        .dropdown:hover .dropdown-list {
-            display: block;
-        }
+.dropdown:hover .dropdown-list {
+    display: block;
+}
 
-        body {
-            text-align: center;
-            background: rgb(19, 53, 78);
-        }
+body {
+    text-align: center;
+    background: rgb(19, 53, 78);
+}
