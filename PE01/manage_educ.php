@@ -70,10 +70,19 @@ unset($_SESSION["password"]);
 										
 									<br>
 									
-									<?php echo "<input name ='colName' type = 'hidden' value = '".$row['Symbol']."'>"; ?>
+									<?php echo "<input name ='colName' type = 'hidden' value = '".$row['lvl']."'>"; ?>
 									<input name = "newVal" type = "text">
 									<input type = "submit" value = "Update">
 							</form>
+			            </td>	
+
+			            <td>
+			            	<form id='delete' method="POST" action="./delete_educ.php">
+									<?php echo "<input name ='colName' type = 'hidden' value = '" . $row['lvl'] . "'>"; ?>
+									<input name='username' type='hidden' value="admin">
+									<input name='password' type='hidden' value="admin">
+									<input id='delete' type="submit" value="Delete">
+								</form>
 			            </td>	
 			            </tr>	 
 				    <?php 
