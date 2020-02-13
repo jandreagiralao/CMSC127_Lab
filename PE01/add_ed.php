@@ -27,40 +27,15 @@ unset($_SESSION["password"]);
     </form>
 
     <div class="container">
-    	<?php
-	
-				session_start();
-
-				if($_SERVER["REQUEST_METHOD"] == "POST") 
-					connect();
-
-				function connect(){
-					$error_msg = "";
-					$servername = "localhost";
-					$username = "root";
-					$password = "";
-					$dbname = "applicants";
-					// Create connection
-					$conn = new mysqli($servername, $username, $password, $dbname);
-					// Check connection
-					/*
-					if (mysqli_connect_error())
-						die("Connection failed: ".mysqli_connect_error());
-					else echo "Connected successfully <br>";
-					*/
-					$edID = $_POST['edID'];
-					$lvl = $_POST['lvl'];
-
-					//insert values to table
-					$sql = "INSERT INTO education VALUES ('$edID', '$lvl')";
-
-					if ($conn->query($sql) === TRUE)
-						echo "<h2 style='color: red;'>Data inserted successfuly.</h2>"; 
-					else 
-						echo "<h2 style='color: red;'>Error adding data:" .$conn->error. "</h2>";
-					$conn->close();
-				}
-			?>
+    	<form class = "add_form" action="add.php" method="post">
+				<p>Ed ID</p>
+				<input type="text" name="edID" required> <br>
+				<p>Level</p>
+				<input type="text" name="lvl" required> <br>
+				<input name='username' type='hidden' value="admin">
+        		<input name='password' type='hidden' value="admin">
+				<input type="submit" name="submit" value="Submit">
+			</form>
     </div>
 </body>
 </html>

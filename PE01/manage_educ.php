@@ -45,7 +45,7 @@ unset($_SESSION["password"]);
 			       		<th>EdID</th>
 			       		<th>Level</th>
 			       		<th>
-			       			<form action="./add_educ.php" method="post">
+			       			<form action="./add_ed.php" method="post">
 				                <input name='username' type='hidden' value="admin">
 				                <input name='password' type='hidden' value="admin">
 				                <input id='' type="submit" value="Add">
@@ -69,11 +69,21 @@ unset($_SESSION["password"]);
 									</select>
 										
 									<br>
-									
-									<?php echo "<input name ='colName' type = 'hidden' value = '".$row['Symbol']."'>"; ?>
+									<input name='username' type='hidden' value="admin">
+        							<input name='password' type='hidden' value="admin">
+									<?php echo "<input name ='colName' type = 'hidden' value = '".$row['lvl']."'>"; ?>
 									<input name = "newVal" type = "text">
 									<input type = "submit" value = "Update">
 							</form>
+			            </td>	
+
+			            <td>
+			            	<form id='delete' method="POST" action="./delete_educ.php">
+									<?php echo "<input name ='colName' type = 'hidden' value = '" .$row['lvl']. "'>"; ?>
+									<input name='username' type='hidden' value="admin">
+									<input name='password' type='hidden' value="admin">
+									<input id='delete' type="submit" value="Delete">
+								</form>
 			            </td>	
 			            </tr>	 
 				    <?php 
