@@ -1,0 +1,18 @@
+.dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-list {
+            display: none;
+            position: absolute;
+        }
+
+        .dropdown:hover .dropdown-list {
+            display: block;
+        }
+
+        body {
+            text-align: center;
+            background: rgb(19, 53, 78);
+        }

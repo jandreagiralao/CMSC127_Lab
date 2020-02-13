@@ -14,6 +14,11 @@ unset($_SESSION["password"]);
 ?>
 
 <!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./admin.css">
+</head>
 
 <body>
     <form action="./viewXdelete.php" method="post">
@@ -21,25 +26,31 @@ unset($_SESSION["password"]);
         <input name='password' type='hidden' value="admin">
         <input id='delete' type="submit" value="View applicant's page">
     </form>
+    <!--
+        <select onchange="location = this.value">
+            <option value="./main.php">Home</option>
+            <option value="./viewXdelete.php">Applican'ts page</option>
+        </select>     --->
 
-    <div id="manage">
-        <form action="./educ.php" method="post">
-            <input name='username' type='hidden' value="admin">
-            <input name='password' type='hidden' value="admin">
-            <input id='educ' type="submit" value="Education">
-        </form>
-
-        <form action="./educ.php" method="post">
-            <input name='username' type='hidden' value="admin">
-            <input name='password' type='hidden' value="admin">
-            <input id='educ' type="submit" value="Scholarship">
-        </form>
-
-        <form action="./educ.php" method="post">
-            <input name='username' type='hidden' value="admin">
-            <input name='password' type='hidden' value="admin">
-            <input id='educ' type="submit" value="Major Field">
-        </form>
+    <div class="dropdown">
+        <button>Manage</button>
+        <div class="dropdown-list">
+            <form action="#" method="post">
+                <input name='username' type='hidden' value="admin">
+                <input name='password' type='hidden' value="admin">
+                <input id='' type="submit" value="Education">
+            </form>
+            <form action="#" method="post">
+                <input name='username' type='hidden' value="admin">
+                <input name='password' type='hidden' value="admin">
+                <input id='' type="submit" value="Scholarship">
+            </form>
+            <form action="#" method="post">
+                <input name='username' type='hidden' value="admin">
+                <input name='password' type='hidden' value="admin">
+                <input id='' type="submit" value="Major Field">
+            </form>
+        </div>
     </div>
 </body>
 
