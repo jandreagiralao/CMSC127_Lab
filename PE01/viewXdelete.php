@@ -1,16 +1,16 @@
 <?php
-	session_start();
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$_SESSION["username"] = $_REQUEST["username"];
-		$_SESSION["password"] = $_REQUEST["password"];
-	}
+session_start();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$_SESSION["username"] = $_REQUEST["username"];
+	$_SESSION["password"] = $_REQUEST["password"];
+}
 
-	if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
-		header("Location: ./main.php");
-	}
+if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
+	header("Location: ./main.php");
+}
 
-	unset($_SESSION["username"]);
-	unset($_SESSION["password"]);
+unset($_SESSION["username"]);
+unset($_SESSION["password"]);
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
 
 <head>
 	<title>The Academe - Applicants List</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./images/fist.png">
+	<link rel="shortcut icon" type="image/x-icon" href="./images/fist.png">
 	<link rel="stylesheet" type="text/css" href="./delview.css">
 	<link rel="stylesheet" href="./nav.css">
 </head>
@@ -26,7 +26,12 @@
 <body>
 	<div id="nav">
 		<a href="./main.php">
-			< HOME</a> <p>You are seeing the list of Applicants</p>
+			< HOME</a> <p>You are in the Applicant's Page</p>
+				<form action="./admin.php" method="post">
+					<input name='username' type='hidden' value="admin">
+					<input name='password' type='hidden' value="admin">
+					<input id='delete' type="submit" value="< Go back.">
+				</form>
 	</div>
 	<section id="container">
 		<section id="content">
@@ -83,16 +88,16 @@
 							<td>
 								<form id='view' method="POST" action="./view.php">
 									<?php echo "<input name ='colName' type = 'hidden' value = '" . $row['sName'] . "'>"; ?>
-									<input name ='username' type = 'hidden' value = "admin">
-									<input name ='password' type = 'hidden' value = "admin">
+									<input name='username' type='hidden' value="admin">
+									<input name='password' type='hidden' value="admin">
 									<input id='view' type="submit" value="View Applicant">
 								</form>
 							</td>
 							<td>
 								<form id='delete' method="POST" action="./delete.php">
 									<?php echo "<input name ='colName' type = 'hidden' value = '" . $row['sName'] . "'>"; ?>
-									<input name ='username' type = 'hidden' value = "admin">
-									<input name ='password' type = 'hidden' value = "admin">
+									<input name='username' type='hidden' value="admin">
+									<input name='password' type='hidden' value="admin">
 									<input id='delete' type="submit" value="Delete">
 								</form>
 							</td>
