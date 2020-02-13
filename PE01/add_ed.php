@@ -32,6 +32,8 @@ unset($_SESSION["password"]);
 				<input type="text" name="edID" required> <br>
 				<p>Level</p>
 				<input type="text" name="lvl" required> <br>
+				<input name='username' type='hidden' value="admin">
+        		<input name='password' type='hidden' value="admin">
 				<input type="submit" name="submit" value="Submit">
 			</form>
     </div>
