@@ -45,7 +45,7 @@ unset($_SESSION["password"]);
 			       		<th>EdID</th>
 			       		<th>Level</th>
 			       		<th>
-			       			<form action="./add_educ.php" method="post">
+			       			<form action="./add_ed.php" method="post">
 				                <input name='username' type='hidden' value="admin">
 				                <input name='password' type='hidden' value="admin">
 				                <input id='' type="submit" value="Add">
