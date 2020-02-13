@@ -70,7 +70,7 @@ unset($_SESSION["password"]);
 										
 									<br>
 									
-									<?php echo "<input name ='colName' type = 'hidden' value = '".$row['Symbol']."'>"; ?>
+									<?php echo "<input name ='colName' type = 'hidden' value = '".$row['lvl']."'>"; ?>
 									<input name = "newVal" type = "text">
 									<input type = "submit" value = "Update">
 							</form>
