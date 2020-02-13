@@ -138,6 +138,8 @@ h1 {
     width: 100%;
     color: white;
     background: none;
+    border: solid 2px white;
+    font-weight: bold;
 }
 
 #option:hover {

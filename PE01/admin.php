@@ -17,6 +17,8 @@
 <html>
 
     <head>
+        <title>The Academe - Admin Page</title>
+        <link rel="shortcut icon" type="image/x-icon" href="./images/fist.png">
         <link rel="stylesheet" type="text/css" href="./admin.css">
         <link rel="stylesheet" href="./nav.css">
     </head>
@@ -26,7 +28,7 @@
             <a href="./main.php">< LOGOUT</a>
             <p>Welcome to the Admin Page</p>
         </div>
-        
+
         <div class="grid_2">
             <div class="view">
                 <form action="./viewXdelete.php" method="post">
