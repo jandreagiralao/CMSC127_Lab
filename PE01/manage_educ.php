@@ -32,7 +32,7 @@ unset($_SESSION["password"]);
 				$servername = "localhost";
 				$username = "root";
 				$password = "";
-				$dbname = "stocks";
+				$dbname = "applicants";
 				// Create connection
 				$conn = new mysqli($servername, $username, $password, $dbname);
 				$sql = "SELECT * from education";
