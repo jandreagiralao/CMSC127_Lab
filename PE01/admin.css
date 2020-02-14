@@ -47,17 +47,21 @@
 }
 
 .dropdown-list {
-    display: block;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     visibility: hidden;
     position: absolute;
     right: 0;
     top: 0;
     width: 100%;
     border-radius: 15px;
+    height: 58vh;
 }
 
 .dropdown:hover .dropdown-list {
     visibility: visible;
+    border: solid 3px white;
+    border-radius: 0;
 }
 
 body {
@@ -133,13 +137,13 @@ h1 {
 }
 
 #option {
-    padding: 8.1vh;
     font-size: 2.30vh;
+    height: 19vh;
     width: 100%;
     color: white;
     background: none;
-    border: solid 2px white;
     font-weight: bold;
+    border: none;
 }
 
 #option:hover {
