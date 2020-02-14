@@ -22,7 +22,7 @@
 </head>
 <body>
 	<div id="nav">
-		<a href="./main.php">HOME</a>
+		<a href="./main.php">LOGOUT</a>
 		<p>You are in the Applicants Page - Signed in as admin</p>
 		<form action="./viewXdelete.php" method="post">
 			<input name ='username' type = 'hidden' value = "admin">

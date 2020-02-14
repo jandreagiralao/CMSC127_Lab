@@ -50,7 +50,7 @@
 	?>
 
 	<div id="nav">
-		<a href="./main.php">HOME</a>
+		<a href="./main.php">LOGOUT</a>
 		<p>You are in <?php echo $row['fName'] ?> <?php echo $row['sName'] ?>'s Profile - Signed in as admin</p>
 		<form action="./viewXdelete.php" method="post">
 			<input name ='username' type = 'hidden' value = "admin">

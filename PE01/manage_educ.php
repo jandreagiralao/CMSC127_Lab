@@ -16,11 +16,23 @@ unset($_SESSION["password"]);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Manage Education Table</title>
+	<title>The Academe - Manage Education Table</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./images/fist.png">
 	<link rel="stylesheet" type="text/css" href="./admin.css">
+	<link rel="stylesheet" type="text/css" href="./delview.css">
+	<link rel="stylesheet" href="./nav.css">
 </head>
 
 <body>
+	<div id="nav">
+		<a href="./main.php">LOGOUT</a> 
+		<p>You are managing the Education Page - Signed in as admin</p>
+		<form action="./admin.php" method="post">
+			<input name='username' type='hidden' value="admin">
+			<input name='password' type='hidden' value="admin">
+			<input id='delete' type="submit" value="Go Back to Admin Page.">
+		</form>
+	</div>
     <form action="./admin.php" method="post">
         <input name='username' type='hidden' value="admin">
         <input name='password' type='hidden' value="admin">

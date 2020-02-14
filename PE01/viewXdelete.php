@@ -25,8 +25,8 @@ unset($_SESSION["password"]);
 
 <body>
 	<div id="nav">
-		<a href="./main.php">HOME</a> 
-		<p>You are in the Applicants Page</p>
+		<a href="./main.php">LOGOUT</a> 
+		<p>You are in the Applicants Page  - Signed in as admin</p>
 		<form action="./admin.php" method="post">
 			<input name='username' type='hidden' value="admin">
 			<input name='password' type='hidden' value="admin">
