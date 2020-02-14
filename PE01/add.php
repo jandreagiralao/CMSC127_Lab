@@ -22,7 +22,7 @@ unset($_SESSION["password"]);
 	<form action="./manage_educ.php" method="post">
         <input name='username' type='hidden' value="admin">
         <input name='password' type='hidden' value="admin">
-        <input id='delete' type="submit" value="Back to Manage Education Page">
+		<input id='delete' type="submit" value="Back to Manage Education Page">
     </form>
 
 	<div class="container">
