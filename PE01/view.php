@@ -44,16 +44,13 @@
 		if ($result->num_rows > 0) {
 			// output data of each row
 			while($row = $result->fetch_assoc()) { 
+				$_SESSION["what"] = "in ".$row['fName']." ".$row['sName'];
+				$_SESSION["where"] = "'s";
 	?>
 
 	<div id="nav">
-		<a href="./main.php">LOGOUT</a>
-		<p>You are in <?php echo $row['fName'] ?> <?php echo $row['sName'] ?>'s Profile - Signed in as <?php echo $_SESSION["username"] ?></p>
-		<form action="./viewXdelete.php" method="post">
-			<input name ='username' type = 'hidden' value = "admin">
-			<input name ='password' type = 'hidden' value = "admin">
-			<input id='delete' type="submit" value="Go back to the list of applicants.">
-		</form>
+		<?php include 'navbar.php' ?>
+		<?php include 'gobackNav.php' ?>
 	</div>
 	
 	

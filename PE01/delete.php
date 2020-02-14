@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div id="nav">
-		<a href="./main.php">LOGOUT</a>
+		<a href="./main.php">SIGN OUT</a>
 		<p>You are in the Applicants Page - Signed in as <?php echo $_SESSION["username"] ?></p>
 		<form action="./viewXdelete.php" method="post">
 			<input name ='username' type = 'hidden' value = "admin">

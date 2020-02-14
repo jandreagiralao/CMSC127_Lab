@@ -22,7 +22,7 @@
 
     <body>
         <div id="nav">
-            <a href="./main.php">LOGOUT</a>
+            <a href="./main.php">SIGN OUT</a>
             <p>Welcome to the Admin Page - Signed in as admin</p>
         </div>
 

@@ -8,6 +8,9 @@
 	if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
 		header("Location: ./main.php");
 	}
+
+	$_SESSION["what"] = "in";
+	$_SESSION["where"] = " the Applicants";
 ?>
 
 <!DOCTYPE html>
@@ -22,14 +25,10 @@
 
 <body>
 	<div id="nav">
-		<a href="./main.php">LOGOUT</a> 
-		<p>You are in the Applicants Page  - Signed in as <?php echo $_SESSION["username"] ?></p>
-		<form action="./admin.php" method="post">
-			<input name='username' type='hidden' value="admin">
-			<input name='password' type='hidden' value="admin">
-			<input id='delete' type="submit" value="Go Back to Admin Page.">
-		</form>
+		<?php include 'navbar.php' ?>
+		<?php include 'gobackNav.php' ?>
 	</div>
+	
 	<section id="container">
 		<section id="content">
 			<?php
