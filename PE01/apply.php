@@ -9,8 +9,8 @@
     </head>
     <body>
         <div id="nav">
-            <a href="./main.php">HOME</a>
-            <p>You are in the Application Page</p>
+            <a href="./main.php">LOGOUT</a>
+            <p>You are in the Application Page - Signed in as admin</p>
         </div>
         <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
             <div id="header">

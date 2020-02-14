@@ -22,8 +22,8 @@
 </head>
 <body>
 	<div id="nav">
-		<a href="./main.php">HOME</a>
-		<p>You are in the Applicant's Page</p>
+		<a href="./main.php">LOGOUT</a>
+		<p>You are in the Applicants Page - Signed in as admin</p>
 		<form action="./viewXdelete.php" method="post">
 			<input name ='username' type = 'hidden' value = "admin">
 			<input name ='password' type = 'hidden' value = "admin">

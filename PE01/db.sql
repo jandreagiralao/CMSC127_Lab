@@ -1,7 +1,7 @@
 CREATE DATABASE applicants;
 
 CREATE TABLE info(
-	sName varchar(30) primary key,
+	sName varchar(30) not null,
 	fName varchar(30) not null,
 	fNameExt varchar(5),
 	mName varchar(30) not null,
