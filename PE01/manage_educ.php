@@ -46,15 +46,17 @@
 			<table> 
 	    		<tr>
 	    			<thead>
-			       		<th>EdID</th>
-			       		<th>Level</th>
-			       		<th>
+						<th>
 			       			<form action="./add_ed.php" method="post">
 				                <input name='username' type='hidden' value="admin">
 				                <input name='password' type='hidden' value="admin">
 				                <input id='' type="submit" value="Add">
 			            	</form>
 			       		</th>
+			       		<th>EdID</th>
+						<th>Level</th>
+						<th></th>
+						<th></th>   
 					</thead>
 			 	</tr>
 
@@ -63,7 +65,9 @@
 			         // output data of each row
 			         while($row = $result->fetch_assoc()) { 
 			        	?>
-			            <tr><td><?php echo $row['edID'] ?> </td>	
+			            <tr>
+						<td></td>
+						<td><?php echo $row['edID'] ?> </td>	
 			            <td><?php echo $row['lvl'] ?> </td>	
 			            <td>
 			            	<form method = "POST" action = "update_educ.php">
