@@ -44,15 +44,17 @@
 			<table> 
 	    		<tr>
 	    			<thead>
-			       		<th>Scholarship ID</th>
-			       		<th>Scholarship Name</th>
-			       		<th>
+						<th>
 			       			<form action="./add_scholar.php" method="post">
 				                <input name='username' type='hidden' value="admin">
 				                <input name='password' type='hidden' value="admin">
 				                <input id='' type="submit" value="Add">
 			            	</form>
 			       		</th>
+			       		<th>Scholarship ID</th>
+						<th>Scholarship Name</th>
+						<th></th>
+						<th></th>
 					</thead>
 			 	</tr>
 
@@ -61,7 +63,9 @@
 			         // output data of each row
 			         while($row = $result->fetch_assoc()) { 
 			        	?>
-			            <tr><td><?php echo $row['sID'] ?> </td>	
+			            <tr>
+						<td></td>
+						<td><?php echo $row['sID'] ?> </td>	
 			            <td><?php echo $row['scholarship'] ?> </td>	
 			            <td>
 			            	<form method = "POST" action = "update_scholar.php">
