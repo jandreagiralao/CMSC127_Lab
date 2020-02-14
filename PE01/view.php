@@ -23,34 +23,42 @@
 </head>
 
 <body>
+	<?php
+		$servername = "localhost";
+		$username = "root";
+		$password = "";
+		$dbname = "applicants";
+		//getting id of the data from url
+		$sName = $_POST['colName'];  
+		// Create connection
+		$conn = new mysqli($servername, $username, $password, $dbname);
+		// Check connection
+		/*
+		if (mysqli_connect_error())
+			die("Connection failed: ".mysqli_connect_error());
+		else echo "Connected successfully <br>";
+		*/
+		
+		$sql = "SELECT * from info WHERE sName = '$sName' ";
+		$result = $conn->query($sql); 
+	?> 
+
+	<?php
+		if ($result->num_rows > 0) {
+			// output data of each row
+			while($row = $result->fetch_assoc()) { 
+	?>
+
 	<div id="nav">
 		<a href="./main.php">HOME</a>
-		<p>You are in the Applicant's Page</p>
+		<p>You are in <?php echo $row['fName'] ?> <?php echo $row['sName'] ?>'s Profile - Signed in as admin</p>
 		<form action="./viewXdelete.php" method="post">
 			<input name ='username' type = 'hidden' value = "admin">
 			<input name ='password' type = 'hidden' value = "admin">
 			<input id='delete' type="submit" value="Go back to the list of applicants.">
 		</form>
 	</div>
-	<?php
-			$servername = "localhost";
-			$username = "root";
-			$password = "";
-			$dbname = "applicants";
-			//getting id of the data from url
-			$sName = $_POST['colName'];  
-			// Create connection
-			$conn = new mysqli($servername, $username, $password, $dbname);
-			// Check connection
-			/*
-			if (mysqli_connect_error())
-				die("Connection failed: ".mysqli_connect_error());
-			else echo "Connected successfully <br>";
-			*/
-			
-			$sql = "SELECT * from info WHERE sName = '$sName' ";
-	    	$result = $conn->query($sql); 
-	?> 
+	
 	
 	<section id="container">
 		<section id="result">
@@ -62,12 +70,6 @@
             	<section class="title">
                     <p>I. PERSONAL INFORMATION</p>
                 </section>
-
-                <?php
-                	if ($result->num_rows > 0) {
-				        // output data of each row
-				        while($row = $result->fetch_assoc()) { 
-				?>
 
 				<section>
 					<span class="label left">SURNAME</span>
