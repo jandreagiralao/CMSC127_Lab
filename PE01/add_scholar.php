@@ -16,7 +16,7 @@ unset($_SESSION["password"]);
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Add to Education Table</title>
+	<title>Add to Scholarship Table</title>
 	<link rel="stylesheet" type="text/css" href="./admin.css">
 </head>
 <body>
@@ -27,7 +27,7 @@ unset($_SESSION["password"]);
     </form>
 
     <div class="container">
-    	<form class = "add_form" action="#" method="post">
+    	<form class = "add_form" action="adder_scholar.php" method="post">
 				<p>Scholarship ID</p>
 				<input type="text" name="sID" required> <br>
 				<p>Scholarship Name</p>
