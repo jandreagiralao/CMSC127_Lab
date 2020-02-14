@@ -8,9 +8,6 @@
     if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
         header("Location: ./main.php");
     }
-
-    unset($_SESSION["username"]);
-    unset($_SESSION["password"]);
 ?>
 
 <!DOCTYPE html>
@@ -60,6 +57,9 @@
                 </div>
             </div>
         </div>
-        
+        <?php
+            unset($_SESSION["username"]);
+            unset($_SESSION["password"]);
+        ?>
     </body>
 </html>

@@ -8,9 +8,6 @@
 	if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
 		header("Location: ./main.php");
 	}
-
-	unset($_SESSION["username"]);
-	unset($_SESSION["password"]);
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +48,7 @@
 
 	<div id="nav">
 		<a href="./main.php">LOGOUT</a>
-		<p>You are in <?php echo $row['fName'] ?> <?php echo $row['sName'] ?>'s Profile - Signed in as admin</p>
+		<p>You are in <?php echo $row['fName'] ?> <?php echo $row['sName'] ?>'s Profile - Signed in as <?php echo $_SESSION["username"] ?></p>
 		<form action="./viewXdelete.php" method="post">
 			<input name ='username' type = 'hidden' value = "admin">
 			<input name ='password' type = 'hidden' value = "admin">
@@ -292,7 +289,10 @@
 		    ?>
 
 		</section>
-	</section>	
+	</section>
+	<?php
+		unset($_SESSION["username"]);
+		unset($_SESSION["password"]);
+	?>
 </body>
-
 </html>

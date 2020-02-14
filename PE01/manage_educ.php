@@ -1,16 +1,13 @@
 <?php
-session_start();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $_SESSION["username"] = $_REQUEST["username"];
-    $_SESSION["password"] = $_REQUEST["password"];
-}
+	session_start();
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$_SESSION["username"] = $_REQUEST["username"];
+		$_SESSION["password"] = $_REQUEST["password"];
+	}
 
-if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
-    header("Location: ./main.php");
-}
-
-unset($_SESSION["username"]);
-unset($_SESSION["password"]);
+	if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
+		header("Location: ./main.php");
+	}
 ?>
 
 <!DOCTYPE html>
@@ -26,20 +23,15 @@ unset($_SESSION["password"]);
 <body>
 	<div id="nav">
 		<a href="./main.php">LOGOUT</a> 
-		<p>You are managing the Education Page - Signed in as admin</p>
+		<p>You are managing the Education Page - Signed in as <?php echo $_SESSION["username"] ?></p>
 		<form action="./admin.php" method="post">
 			<input name='username' type='hidden' value="admin">
 			<input name='password' type='hidden' value="admin">
 			<input id='delete' type="submit" value="Go Back to Admin Page.">
 		</form>
 	</div>
-    <form action="./admin.php" method="post">
-        <input name='username' type='hidden' value="admin">
-        <input name='password' type='hidden' value="admin">
-        <input id='delete' type="submit" value="View Main Admin Page">
-    </form>
 
-    <div class="container">
+    <div id="container">
     	<?php
 				$servername = "localhost";
 				$username = "root";
@@ -99,13 +91,16 @@ unset($_SESSION["password"]);
 			            </td>	
 			            </tr>	 
 				    <?php 
-				         }   	
-				  	   } 
-				  	   else echo "Database is empty"; 
-				        $conn->close(); 
+						}   	
+					} 
+					else echo "Database is empty"; 
+					$conn->close(); 
 			    ?>
 			 </table>
-
-    </div>
+	</div>
+	<?php
+		unset($_SESSION["username"]);
+		unset($_SESSION["password"]);
+	?>
 </body>
 </html>

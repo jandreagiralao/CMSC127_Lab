@@ -1,23 +1,19 @@
 <?php
-session_start();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $_SESSION["username"] = $_REQUEST["username"];
-    $_SESSION["password"] = $_REQUEST["password"];
-}
+	session_start();
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		$_SESSION["username"] = $_REQUEST["username"];
+		$_SESSION["password"] = $_REQUEST["password"];
+	}
 
-if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
-    header("Location: ./main.php");
-}
-
-unset($_SESSION["username"]);
-unset($_SESSION["password"]);
+	if ($_SESSION["username"] != "admin" || $_SESSION["password"] != "admin") {
+		header("Location: ./main.php");
+	}
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Add to Education Table</title>
-	<link rel="stylesheet" type="text/css" href="./admin.css">
 </head>
 <body>
     <form action="./manage_educ.php" method="post">
@@ -36,6 +32,10 @@ unset($_SESSION["password"]);
         		<input name='password' type='hidden' value="admin">
 				<input type="submit" name="submit" value="Submit">
 			</form>
-    </div>
+	</div>
+	<?php
+		unset($_SESSION["username"]);
+		unset($_SESSION["password"]);
+	?>
 </body>
 </html>
