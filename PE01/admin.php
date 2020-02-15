@@ -49,7 +49,7 @@
                         <input name='password' type='hidden' value="admin">
                         <input id='option' type="submit" value="SCHOLARSHIP">
                     </form>
-                    <form action="./manage_major" method="post">
+                    <form action="./manage_major.php" method="post">
                         <input name='username' type='hidden' value="admin">
                         <input name='password' type='hidden' value="admin">
                         <input id='option' type="submit" value="MAJOR FIELD">
