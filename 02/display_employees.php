@@ -35,6 +35,11 @@
                     <th>Office Code</th>
                     <th>Reports To</th>
                     <th>Job Title</th>
+                    <th>
+                        <form action="./add_employees.php" method="post">
+                            <input id='' type="submit" value="Add">
+                        </form>
+                    </th>
                 </tr>
 
                 <?php
