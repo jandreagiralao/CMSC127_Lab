@@ -21,7 +21,7 @@
 							die("Connection failed: ".mysqli_connect_error());
 						else echo "Connected successfully <br>";
 						*/
-            $sql = "SELECT * from employees ORDER BY lastName ASC";
+            $sql = "SELECT * from employees ORDER BY employeeNumber ASC";
             $result = $conn->query($sql);
             ?>
 
