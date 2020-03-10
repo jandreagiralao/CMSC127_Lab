@@ -44,7 +44,6 @@
 					*/
 					$edID = $_POST['edID'];
 					$lvl = $_POST['lvl'];
-
 					//insert values to table
 					$sql = "INSERT INTO education VALUES ('$edID', '$lvl')";
 

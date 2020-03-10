@@ -46,7 +46,8 @@
 				<input type="text" name="postalCode" maxlength="15" required> <br>
 				<p>Country</p>
 				<input type="text" name="country" maxlength="50" required> <br>
-				<select name="salesRepEmployeeNumber" ><p>Sales Representative Employee Number</p>
+				<p>Sales Representative Employee Number</p>
+				<select name="salesRepEmployeeNumber" >
 				<option>Select Here</option>
 
 				<?php
@@ -57,7 +58,7 @@
 						while($row = $result->fetch_assoc()) 
 						{ 
 							?>
-						<option value="<?$row['employeeNumber'] ?>"> <?php echo $row['employeeNumber'] ?> </option>
+						<option value="<?php echo $row['employeeNumber']; ?>" > <?php echo $row['employeeNumber'] ?> </option>
 				<?php 	
 						}
 					}
