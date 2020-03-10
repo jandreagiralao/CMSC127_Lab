@@ -9,7 +9,7 @@
     	<form class = "add_customer" action="add_customer.php" method="post">
 				<p>Customer Number</p>
 				<input type="text" name="customerNumber" maxlength="11" required> <br>
-				<p>Customer Number</p>
+				<p>Customer Name</p>
 				<input type="text" name="customerName"  maxlength="50" required> <br>
 				<p>Contact Last Name</p>
 				<input type="text" name="contactLastName" maxlength="50" required> <br>
