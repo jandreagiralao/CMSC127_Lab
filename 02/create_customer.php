@@ -6,7 +6,7 @@
 <body>
 
     <div class="container">
-    	<form class = "add_customer" action="add.php" method="post">
+    	<form class = "add_customer" action="add_customer.php" method="post">
 				<p>Customer Number</p>
 				<input type="text" name="customerNumber" maxlength="11" required> <br>
 				<p>Customer Number</p>
