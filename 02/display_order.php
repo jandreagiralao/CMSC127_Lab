@@ -34,6 +34,11 @@
                     <th>Status</th>
                     <th>Comments</th>
                     <th>Customer Number</th>
+                    <th>
+                        <form action="./create_order.php" method="post">
+                            <input id='' type="submit" value="Add">
+                        </form>
+                    </th>
                 </tr>
 
                 <?php

@@ -23,7 +23,7 @@
 <body>
 
     <div class="container">
-    	<form class = "add_customer" action="add_product.php" method="post">
+    	<form class = "add" id = "add_product" action="add_product.php" method="post">
 				<p>Product Code</p>
 				<input type="text" name="productCode" maxlength="15" required> <br>
 				<p>Product Name</p>

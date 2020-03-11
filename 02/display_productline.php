@@ -31,6 +31,11 @@
                     <th>Text Description</th>
                     <th>HTML Description</th>
                     <th>Image</th>
+                    <th>
+                        <form action="./create_productline.php" method="post">
+                            <input id='' type="submit" value="Add">
+                        </form>
+                    </th>
                 </tr>
 
                 <?php
