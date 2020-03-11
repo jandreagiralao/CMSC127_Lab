@@ -64,7 +64,7 @@
 					}
 				?>
 				</select>
-			<!--	<input type="text" name="salesRepEmployeeNumber" maxlength="11" > <br> -->
+				
 				<p>Credit Limit</p>
 				<input type="number" name="creditLimit" value="0.00" required> <br>
 				<input type="submit" name="submit" value="Submit">

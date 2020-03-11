@@ -38,7 +38,7 @@
             <p>Office Code</p>
             <p>Reports To</p>
             <select name="officeCode" >
-                <option value="null">Select Here</option>
+                <option value="">Select Here</option>
                 <?php
                     $result = $conn->query("SELECT * FROM offices");
 
