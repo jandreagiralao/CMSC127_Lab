@@ -23,7 +23,7 @@
 <body>
 
     <div class="container">
-    	<form class = "add" id = "add_orderdetails" action = "add_orderdetails.php" method = "post">
+    	<form class = "add" id = "update_orderdetails" action = "add_orderdetails.php" method = "post">
             <p>Order Number</p>
             <select name="orderNumber" >
             <option>Select Here</option>
@@ -59,11 +59,11 @@
             ?>
             </select>
     	    <p>Quantity Ordered</p>
-			<input type="number" name="productName" step="1" maxlength="11" required> <br>
+			<input type="number" name="quantityOrdered" step="1" maxlength="11" required> <br>
 			<p>Price Each</p>
-			<input type="number" name="productScale" step="0.01" required> <br>
+			<input type="number" name="priceEach" step="0.01" required> <br>
             <p>Order Line Number</p>
-			<input type="number" name="productScale" step="1" maxlength="6" required> <br>
+			<input type="number" name="orderLineNumber" step="1" maxlength="6" required> <br>
 
 			<input type="submit" name="submit" value="Submit">
 			</form>
