@@ -32,13 +32,16 @@
 						die("Connection failed: ".mysqli_connect_error());
 					else echo "Connected successfully <br>";
 					*/
-                    $customerNumber = $_POST['customerNumber'];
-                    $checkNumber = $_POST['checkNumber'];
-                    $paymentDate = $_POST['paymentDate'];
-                    $amount = $_POST['amount'];
+                    $orderNumber = (int) $_POST['orderNumber'];
+                    $orderDate = $_POST['orderDate'];
+                    $requiredDate = $_POST['requiredDate'];
+                    $shippedDate = $_POST['shippedDate'];
+                    $status = $_POST['status'];
+                    $comments = $_POST['comments'];
+                    $customerNumber = (int) $_POST['customerNumber'];
 
 					//insert values to table
-					$sql = "INSERT INTO payments VALUES ('$customerNumber', '$checkNumber', '$paymentDate', '$amount')";
+					$sql = "INSERT INTO orders VALUES ('$orderNumber', '$orderDate', '$requiredDate', '$shippedDate', '$status', '$comments', '$customerNumber')";
 
 					if ($conn->query($sql) === TRUE)
 						echo "<h2 style='color: red;'>Data inserted successfuly.</h2>";
