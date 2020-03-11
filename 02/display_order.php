@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Order Details</title>
+    <title></title>
 </head>
 
 <body>
@@ -21,22 +21,19 @@
 							die("Connection failed: ".mysqli_connect_error());
 						else echo "Connected successfully <br>";
 						*/
-            $sql = "SELECT * from orderdetails ORDER BY orderNumber ASC";
+            $sql = "SELECT * from orders ORDER BY orderNumber ASC";
             $result = $conn->query($sql);
             ?>
 
             <table>
                 <tr>
                     <th>Order Number</th>
-                    <th>Product Code</th>
-                    <th>Quantity Ordered</th>
-                    <th>Price Each</th>
-                    <th>Order Line Number</th>
-                    <th>
-                        <form action="./update_orderdetails.php" method="post">
-                            <input id='' type="submit" value="Update">
-                        </form>
-                    </th>
+                    <th>Order Date</th>
+                    <th>Required Date</th>
+                    <th>Shipped Date</th>
+                    <th>Status</th>
+                    <th>Comments</th>
+                    <th>Customer Number</th>
                 </tr>
 
                 <?php
@@ -49,16 +46,22 @@
                                 <?php echo $row['orderNumber'] ?>
                             </td>
                             <td>
-                                <?php echo $row['productCode'] ?>
+                                <?php echo $row['orderDate'] ?>
                             </td>
                             <td>
-                                <?php echo $row['quantityOrdered'] ?>
+                                <?php echo $row['requiredDate'] ?>
                             </td>
                             <td>
-                                <?php echo $row['priceEach'] ?>
+                                <?php echo $row['shippedDate'] ?>
                             </td>
                             <td>
-                                <?php echo $row['orderLineNumber'] ?>
+                                <?php echo $row['status'] ?>
+                            </td>
+                            <td>
+                                <?php echo $row['comments'] ?>
+                            </td>
+                            <td>
+                                <?php echo $row['customerNumber'] ?>
                             </td>
                         </tr>
                 <?php
