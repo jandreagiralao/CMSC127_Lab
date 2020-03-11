@@ -24,7 +24,7 @@
 
 <body>
     <div class="container">
-        <form class="add" id="add_form" action="add_employee.php" method="post">
+        <form class="add" id="add_employee" action="add_employee.php" method="post">
             <p>Employee Number</p>
             <input type="number" name="employeeNumber" required> <br>
             <p>Last Name</p>

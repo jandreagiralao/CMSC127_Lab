@@ -24,7 +24,7 @@ else echo "Connected successfully <br>";
 
 <body>
     <div class="container">
-        <form class="add" id="add_form" action="add_office.php" method="post">
+        <form class="add" id="add_office" action="add_office.php" method="post">
             <p>Office Code</p>
             <input type="text" name="officeCode" maxlength="10" required> <br>
             <p>City</p>
