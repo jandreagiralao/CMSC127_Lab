@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Order Details</title>
+    <title></title>
 </head>
 
 <body>
@@ -21,22 +21,16 @@
 							die("Connection failed: ".mysqli_connect_error());
 						else echo "Connected successfully <br>";
 						*/
-            $sql = "SELECT * from orderdetails ORDER BY orderNumber ASC";
+            $sql = "SELECT * from productlines ORDER BY productLine ASC";
             $result = $conn->query($sql);
             ?>
 
             <table>
                 <tr>
-                    <th>Order Number</th>
-                    <th>Product Code</th>
-                    <th>Quantity Ordered</th>
-                    <th>Price Each</th>
-                    <th>Order Line Number</th>
-                    <th>
-                        <form action="./update_orderdetails.php" method="post">
-                            <input id='' type="submit" value="Update">
-                        </form>
-                    </th>
+                    <th>Product Line</th>
+                    <th>Text Description</th>
+                    <th>HTML Description</th>
+                    <th>Image</th>
                 </tr>
 
                 <?php
@@ -46,19 +40,16 @@
                 ?>
                         <tr>
                             <td>
-                                <?php echo $row['orderNumber'] ?>
+                                <?php echo $row['productLine'] ?>
                             </td>
                             <td>
-                                <?php echo $row['productCode'] ?>
+                                <?php echo $row['textDescription'] ?>
                             </td>
                             <td>
-                                <?php echo $row['quantityOrdered'] ?>
+                                <?php echo $row['htmlDescription'] ?>
                             </td>
                             <td>
-                                <?php echo $row['priceEach'] ?>
-                            </td>
-                            <td>
-                                <?php echo $row['orderLineNumber'] ?>
+                                <?php echo $row['image'] ?>
                             </td>
                         </tr>
                 <?php

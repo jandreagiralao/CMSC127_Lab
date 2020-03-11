@@ -31,6 +31,11 @@
                     <th>Check Number</th>
                     <th>Payment Date</th>
                     <th>Amount</th>
+                    <th>
+                        <form action="./create_payment.php" method="post">
+                            <input id='' type="submit" value="Add">
+                        </form>
+                    </th>
                 </tr>
 
                 <?php
