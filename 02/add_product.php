@@ -39,8 +39,8 @@
                     $productVendor = $_POST['productVendor'];
                     $productDescription = $_POST['productDescription'];
                     $quantityInStock = (int) $_POST['quantityInStock'];
-                    $buyPrice = number_format($_POST['buyPrice'], '.', '');
-                    $MSRP = number_format($_POST['MSRP'], '.', '');
+                    $buyPrice = $_POST['buyPrice'];
+                    $MSRP = $_POST['MSRP'];
 
 					//insert values to table
 					$sql = "INSERT INTO products VALUES ('$productCode', '$productName', '$productLine', '$productScale', '$productVendor', '$productDescription', '$quantityInStock', '$buyPrice', '$MSRP')";
