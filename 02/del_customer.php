@@ -39,6 +39,7 @@
             <th>Postal Code</th>
             <th>Sales Rep Employee Number</th>
             <th>Credit Limit</th>
+            <th>Update</th>
             <th>Delete</th>
         </tr>
 
@@ -86,6 +87,13 @@
                     </td>
                     <td>
                         <?php echo $row['creditLimit'] ?>
+                    </td>
+                    <td>
+                        <form id='update' method="POST" action="./update_customer.php">
+                                    <?php echo "<input name ='colName' type = 'hidden' value = '" . $row['customerNumber'] . "'>"; ?>
+                                    <input name = "tableName" type = 'hidden' value = 'customers' >
+                                    <input id='delete' type="submit" value="Update">
+                                </form>
                     </td>
                     <td>
                     	<form id='delete' method="POST" action="./delete.php">
