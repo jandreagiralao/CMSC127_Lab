@@ -22,6 +22,7 @@
 		}
 
 		$tableName = $_POST['tableName'];
+		
 		if($tableName == 'customers')
 		{
 			//getting customerNumber of the data from url

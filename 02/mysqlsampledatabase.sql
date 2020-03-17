@@ -47,7 +47,7 @@ CREATE TABLE `customers` (
   `creditLimit` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`customerNumber`),
   KEY `salesRepEmployeeNumber` (`salesRepEmployeeNumber`),
-  CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`salesRepEmployeeNumber`) REFERENCES `employees` (`employeeNumber`)
+  CONSTRAINT `customers_ibfk_1` FOREIGN KEY (`salesRepEmployeeNumber`) REFERENCES `employees` (`employeeNumber`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `customers` */
@@ -314,8 +314,8 @@ CREATE TABLE `employees` (
   PRIMARY KEY (`employeeNumber`),
   KEY `reportsTo` (`reportsTo`),
   KEY `officeCode` (`officeCode`),
-  CONSTRAINT `employees_ibfk_1` FOREIGN KEY (`reportsTo`) REFERENCES `employees` (`employeeNumber`),
-  CONSTRAINT `employees_ibfk_2` FOREIGN KEY (`officeCode`) REFERENCES `offices` (`officeCode`)
+  CONSTRAINT `employees_ibfk_1` FOREIGN KEY (`reportsTo`) REFERENCES `employees` (`employeeNumber`) ON DELETE SET NULL,
+  CONSTRAINT `employees_ibfk_2` FOREIGN KEY (`officeCode`) REFERENCES `offices` (`officeCode`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `employees` */
@@ -415,8 +415,8 @@ CREATE TABLE `orderdetails` (
   `orderLineNumber` smallint(6) NOT NULL,
   PRIMARY KEY (`orderNumber`,`productCode`),
   KEY `productCode` (`productCode`),
-  CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`orderNumber`) REFERENCES `orders` (`orderNumber`),
-  CONSTRAINT `orderdetails_ibfk_2` FOREIGN KEY (`productCode`) REFERENCES `products` (`productCode`)
+  CONSTRAINT `orderdetails_ibfk_1` FOREIGN KEY (`orderNumber`) REFERENCES `orders` (`orderNumber`)  ON DELETE CASCADE,
+  CONSTRAINT `orderdetails_ibfk_2` FOREIGN KEY (`productCode`) REFERENCES `products` (`productCode`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `orderdetails` */
@@ -6429,7 +6429,7 @@ CREATE TABLE `orders` (
   `customerNumber` int(11) NOT NULL,
   PRIMARY KEY (`orderNumber`),
   KEY `customerNumber` (`customerNumber`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customerNumber`) REFERENCES `customers` (`customerNumber`)
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customerNumber`) REFERENCES `customers` (`customerNumber`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `orders` */
@@ -7697,7 +7697,7 @@ CREATE TABLE `products` (
   `MSRP` decimal(10,2) NOT NULL,
   PRIMARY KEY (`productCode`),
   KEY `productLine` (`productLine`),
-  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`productLine`) REFERENCES `productlines` (`productLine`)
+  CONSTRAINT `products_ibfk_1` FOREIGN KEY (`productLine`) REFERENCES `productlines` (`productLine`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `products` */
