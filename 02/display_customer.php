@@ -57,6 +57,9 @@
                                 <?php echo $row['customerNumber'] ?>
                             </td>
                             <td>
+                                <?php echo $row['customerName'] ?>
+                            </td>
+                            <td>
                                 <?php echo $row['contactLastName'] ?>
                             </td>
                             <td>
