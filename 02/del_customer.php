@@ -35,8 +35,8 @@
             <th>Address Line 2</th>
             <th>City</th>
             <th>State</th>
-            <th>Country</th>
             <th>Postal Code</th>
+            <th>Country</th>
             <th>Sales Rep Employee Number</th>
             <th>Credit Limit</th>
             <th>Update</th>

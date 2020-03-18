@@ -27,8 +27,8 @@
 
             <table>
                 <tr>
-                    <th>Costumer Number</th>
-                    <th>Costumer Name</th>
+                    <th>Customer Number</th>
+                    <th>Customer Name</th>
                     <th>Contact Last Name</th>
                     <th>Contact First Name</th>
                     <th>Phone</th>
@@ -36,8 +36,8 @@
                     <th>Address Line 2</th>
                     <th>City</th>
                     <th>State</th>
-                    <th>Country</th>
                     <th>Postal Code</th>
+                    <th>Country</th>
                     <th>Sales Rep Employee Number</th>
                     <th>Credit Limit</th>
                     <th>
